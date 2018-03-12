@@ -1,0 +1,43 @@
+<view class="page weui-flex">
+    <view class="page__bd" style="word-break: break-all;-moz-box-shadow:-1px 5px 20px #333333; -webkit-box-shadow:-1px 5px 20px #333333; box-shadow:-1px 5px 20px #333333;margin:10px;">
+        <view class="weui-article bd_cs">
+            <view class="weui-article__h1">【平台使用须知】</view>
+            <view class="weui-article__section">
+                <view class="weui-article__title">1、【雇主预约】</view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">雇主可根据时间、地点等条件，最早可发布1小时以后的需求，钟点工最低3小时起订。</view>
+                </view>
+                <view class="weui-article__title">2、【钟点工接单】</view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">钟点工可根据时间、地点等条件来筛选需求，也可以通过发布供给来主动跟雇主建立对接，最早可接1小时以后的需求。</view>
+                </view>
+                <view class="weui-article__title">3、【雇主取消】</view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">发布的需求，无钟点工接单，可免责取消；</view>
+                    <view class="weui-article__h3">发布的需求，有钟点工接单，且发布时间在半小时以内，可免责取消；</view>
+                    <view class="weui-article__h3">发布的需求，有钟点工接单，且发布时间超过半小时，需要支付15%取消费；</view>
+                    <view class="weui-article__h3">发布的需求，有钟点工接单，超过半小时，且临近服务时间小于半小时，取消需要支付30%取消费；</view>
+                    <view class="weui-article__h3">发布的需求，已经在服务中，取消需要支付已服务费用以及剩余服务费用30%的取消费；</view>  
+                </view>
+                <view class="weui-article__title">4、【钟点工取消】</view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">发布的供给，无雇主确认邀请，可免责取消；</view>
+                    <view class="weui-article__h3">发布的供给，有雇主已确认邀请，且发布时间在半小时以内，可免责取消；</view>
+                    <view class="weui-article__h3">发布的供给，有雇主已确认邀请，且发布时间超过半小时，需要支付15%取消费；</view>
+                    <view class="weui-article__h3">发布的供给，有雇主已确认邀请，超过半小时，且临近服务时间小于半小时，取消需要支付30%取消费；</view>
+                    <view class="weui-article__h3">发布的供给，已经在服务中，取消需要支付已服务费用以及剩余服务费用30%的取消费；</view>
+                    
+                </view>
+                <view class="weui-article__title">5、【纠纷解决】</view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">
+                      为了更好的维护您的权益，请尽量使用线上交易。如因个人原因经线下交易导致与对方发生纠纷，请自行解决处理。本平台只维护经线上交易产生的时长订单，超出订单的时长部分，概不负责，
+请大家悉知。
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-cells__title">服务电话:400-033-0202</view>
+    </view>
+</view>
+

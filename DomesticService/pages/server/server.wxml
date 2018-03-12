@@ -1,0 +1,78 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({sliderOffset}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+              <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                  <view wx:if="{{employerList == '' || employerList == null}}">
+                      <view style='display: flex;justify-content: center;margin-top:25%;'>
+                          <image src="/images/nobespoke.png" style='width:80px;height:80px;'/>
+                      </view>
+                      <view style='display: flex;justify-content: center;margin-top:10px;'>
+                        <label style='color:#cdcdcd;'>暂无信息</label>
+                      </view>
+                          <button type='primary' bindtap='gotoEmployer' style='width:35%;margin-top:30px;font-size:small;background-color:#FF0000'>马上预约</button>
+                  </view>
+                  <view wx:else>
+                      <view class="weui-form-preview"  wx:for="{{employerList}}">
+                        <view class="weui-form-preview__bd" style='margin-top:10px;'>
+                          <view class="weui-form-preview__item">
+                            <view class="weui-form-preview__label">服务</view>
+                            <view class="weui-form-preview__value">{{item.workType}}</view>
+                          </view>
+                          <view class="weui-form-preview__item">
+                              <view class="weui-form-preview__label">酬金</view>
+                              <view class="weui-form-preview__value">{{item.typeMoney}}</view>
+                          </view>
+                          <view class="weui-form-preview__item">
+                              <view class="weui-form-preview__label">地址</view>
+                              <view class="weui-form-preview__value">{{item.chooseAddress}}</view>
+                          </view>
+                        </view>
+                        <view class="weui-form-preview__ft">
+                            <navigator url="" bindtap='subscribe' class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">立即预约</navigator>
+                        </view>
+                      </view>
+                  </view>
+              </view>  
+              <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                  <view wx:if="{{employerList == '' || employerList == null}}">
+                      <view style='display: flex;justify-content: center;margin-top:25%;'>
+                          <image src="/images/nobespoke.png" style='width:80px;height:80px;'/>
+                      </view>
+                      <view style='display: flex;justify-content: center;margin-top:10px;'>
+                        <label style='color:#cdcdcd;'>暂无信息</label>
+                      </view>
+                          <button type='primary' bindtap='gotoEmployee' style='width:35%;margin-top:30px;font-size:small;background-color:#FF0000'>马上预约</button>
+                  </view>
+                  <view wx:else>
+                      <view class="weui-form-preview" wx:for="{{employeeList}}">
+                          <view class="weui-form-preview__hd" style='margin-top:10px;'>
+                              <view class="weui-form-preview__item">
+                                  <view class="weui-form-preview__label">当天服务时间</view>
+                                  <view class="weui-form-preview__value_in-hd">{{item.startTime}}~{{item.endTime}}</view>
+                              </view>
+                          </view>
+                          <view class="weui-form-preview__bd">
+                              <view class="weui-form-preview__item">
+                                  <view class="weui-form-preview__label">服务区域</view>
+                                  <view class="weui-form-preview__value">{{item.regionText}}</view>
+                              </view>
+                          </view>
+                          <view class="weui-form-preview__ft">
+                            <navigator url="" bindtap='subscribe' class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">立即预约</navigator>
+                          </view>
+                      </view>
+                  </view>
+              </view>
+            </view>
+        </view>
+    </view>
+</view>

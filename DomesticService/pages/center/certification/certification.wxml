@@ -1,0 +1,56 @@
+
+
+<view wx:if="{{certification == 0 || certification == 3}}">
+ <form bindsubmit="certificate">
+  <view class="weui-cells__title">认证信息</view>
+  <view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+              <view class="weui-label">真实姓名</view>
+          </view>
+          <view class="weui-cell__bd">
+                <input name="iname" class="weui-input" bindinput ="nameInput" placeholder="请输入真实姓名"/>
+          </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+              <view class="weui-label">身份证号</view>
+          </view>
+          <view class="weui-cell__bd">
+                <input name="icard" class="weui-input" bindinput ="noInput" placeholder="请输入身份证号码"/>
+          </view>
+      </view>
+       <view class="weui-cell weui-cell_select">
+            <view class="weui-cell__hd" style="width: 105px">
+                <picker bindchange="bindCountryCodeChange" value="{{countryCodeIndex}}" range="{{countryCodes}}">
+                    <view class="weui-select">{{countryCodes[countryCodeIndex]}}</view>
+                </picker>
+            </view>
+            <view class="weui-cell__bd weui-cell__bd_in-select-before">
+                <input name="imobile" class="weui-input" type='number' bindinput ="telInput"  value='{{tel}}' placeholder="请输入号码" />
+            </view>
+        </view>
+   </view>
+    <view class="weui-btn-area" wx:if="{{certification == 0}}">
+        <button class="weui-btn" type="primary" formType="submit">提交</button>
+    </view>
+    <view class="weui-btn-area" wx:else>
+        <button class="weui-btn" type="primary" formType="submit">认证失败 重新认证</button>
+    </view>
+</form>
+</view>
+<view wx:elif="{{certification == 1}}">
+  <view style='display: flex;justify-content: center;margin-top:20px;'>
+    <image src="/images/certing.png" style='width:200px;height:200px;'/>
+  </view>
+  <view style='display: flex;justify-content: center;margin-top:20px;'>
+  </view>
+</view>
+<view wx:else>
+  <view style='display: flex;justify-content: center;margin-top:20px;'>
+    <image src="/images/isCert.png" style='width:200px;height:200px;'/>
+  </view>
+  <view style='display: flex;justify-content: center;margin-top:20px;'>
+    <label style='color:#cdcdcd;font-size:larger;'>您已通过认证</label>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+
+.page{
+  background-color: #fff
+}
+/* .housekeeping{
+  background-image:url();
+   background-size: 100% 100%;
+   width: 100%;
+   height: 100px;
+}
+
+.housekeeping2{
+  background-image:url();
+   background-size: 100% 100%;
+   width: 100%;
+   height: 100px;
+}
+
+
+.housekeeping3{
+  background-image:url();
+   background-size: 80% 80%;
+   width: 80%;
+   height: 100px;
+} */

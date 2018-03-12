@@ -1,0 +1,45 @@
+<view class="page">
+    <view class="page__bd">
+        <view wx:if="{{pubList == '' || pubList == null}}">
+            <view style='display: flex;justify-content: center;margin-top:25%;'>
+                <image src="/images/nobespoke.png" style='width:80px;height:80px;'/>
+            </view>
+            <view style='display: flex;justify-content: center;margin-top:10px;'>
+              <label style='color:#cdcdcd;'>暂无信息</label>
+            </view>
+        </view>
+        <view wx:else>
+            <view class="weui-form-preview"  wx:for="{{pubList}}">
+                <view class="weui-form-preview__bd"  style='margin-top:10px;'>
+                    <view class="weui-form-preview__item">
+                        <view class="weui-form-preview__label">服务类型</view>
+                        <view class="weui-form-preview__value">{{item.workType}}</view>
+                    </view>
+                    <view class="weui-form-preview__item">
+                        <view class="weui-form-preview__label">支付金额</view>
+                        <view class="weui-form-preview__value">{{item.typeMoney}}</view>
+                    </view>
+                    <view class="weui-form-preview__item">
+                        <view class="weui-form-preview__label">联系电话</view>
+                        <view class="weui-form-preview__value">{{item.tel}}</view>
+                    </view>
+                    <view class="weui-form-preview__item">
+                        <view class="weui-form-preview__label">详细地址</view>
+                        <view class="weui-form-preview__value">{{item.address}}</view>
+                    </view>
+                    <view class="weui-form-preview__item">
+                        <view class="weui-form-preview__label">发布日期</view>
+                        <view class="weui-form-preview__value">{{item.startDate}}</view>
+                    </view>
+                </view>
+                <view class="weui-form-preview__ft">
+                    <navigator data-key='{{item.id}}' url='' class="weui-form-preview__btn weui-form-preview__btn_default" hover-class="weui-form-preview__btn_active" bindtap="modalinput">取消</navigator>
+                    <navigator class="weui-form-preview__btn weui-form-preview__btn_primary" url='' hover-class="weui-form-preview__btn_active">修改</navigator>
+                </view>
+            </view>
+            <modal hidden="{{hiddenmodalput}}" title="请填写取消原因" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
+              <textarea placeholder="请输入内容" auto-focus bindinput ="refundDesc"></textarea>
+            </modal>
+        </view>
+    </view>
+</view>

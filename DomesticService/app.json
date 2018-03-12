@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/server/server",
+    "pages/center/myself/index",
+    "pages/employee/release",
+    "pages/employee/confirm",
+    "pages/employer/release",
+    "pages/employer/confirm",
+    "pages/center/notice/notice",
+    "pages/center/myorder/order",
+    "pages/center/task/task",
+    "pages/center/certification/certification"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00a2ea",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "navigationBarTitleText": "首页",
+        "iconPath": "images/home_1.png",
+        "selectedIconPath": "images/home_2.png"
+      },
+      {
+        "pagePath": "pages/server/server",
+        "text": "服务",
+        "iconPath": "images/server_1.png",
+        "selectedIconPath": "images/server_2.png"
+      },
+      {
+        "pagePath": "pages/center/myself/index",
+        "text": "我的",
+        "iconPath": "images/center_1.png",
+        "selectedIconPath": "images/center_2.png"
+      }
+    ]
+  }
+}

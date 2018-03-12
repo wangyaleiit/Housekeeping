@@ -1,0 +1,31 @@
+   <view class="page__bd">
+        <view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">付款金额</view>
+                    <view class="weui-form-preview__value_in-hd">¥{{typeMoney}}</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">预约工种</view>
+                    <view class="weui-form-preview__value">{{workType}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">预约时间</view>
+                    <view class="weui-form-preview__value">{{startDate}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">联系电话</view>
+                    <view class="weui-form-preview__value">{{tel}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">服务地址</view>
+                    <view class="weui-form-preview__value">{{ares}} {{address}}</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__ft">
+                <button class='weui-form-preview__btn weui-form-preview__btn_primary' hover-class="weui-form-preview__btn_active" bindtap='confirm'>确认支付</button>
+            </view>
+        </view>
+    </view>

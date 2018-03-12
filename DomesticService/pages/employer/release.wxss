@@ -1,0 +1,31 @@
+
+.pick_datetime {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    background-color:#fff;
+    z-index: 99;
+    overflow:hidden;
+}
+.pick_datetime_tool {
+    display:flex;
+    justify-content:space-between;
+    height:92rpx;
+    line-height:92rpx;
+    border-top:4rpx solid #eee;
+    border-bottom:4rpx solid #eee;
+    padding:0 20rpx;
+    z-index: 99;
+}
+.pick_datetime_ok {font-weight:bold;color:#1AAD16}
+.pick_datetime_clear {color:#666; z-index: 99;}
+.pick_datetime picker-view {
+    font-size:34rpx;
+    z-index: 99;
+}
+.pick_datetime_column {
+    height:40px;
+    line-height:40px;
+    text-align:center;
+} 

@@ -1,0 +1,72 @@
+<include src="../tools/wxml/picker_datetime.wxml"/>
+<form bindsubmit='btnNextStup'>
+    <view class="weui-cells__title">服务日期(当天可服务的时间段)</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">开始时间</view>
+            </view>
+            <view class="weui-cell__bd">
+              <picker mode="time" value="{{startTime}}" start="09:01" end="21:01" bindchange="bindSTimeChange">
+                  <view class="picker weui-input">
+                    {{startTime}}
+                  </view>
+                </picker>
+            </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">结束时间</view>
+            </view>
+            <view class="weui-cell__bd">
+              <picker mode="time" value="{{endTime}}" start="12:01" end="21:01" bindchange="bindETimeChange">
+                  <view class="picker weui-input">
+                    {{endTime}}
+                  </view>
+                </picker>
+            </view>
+        </view>
+    </view>
+    <view class="weui-cells__title">联系方式及服务区域（服务区域最多可选3个）</view>
+      <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">服务区域</view>
+            </view>
+            <view class="weui-cell__bd">
+              <view class="weui-cell__bd">
+
+                <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{regionValue}}" range="{{regionTextArray}}" range-key="{{'name'}}">
+                  <view class="picker weui-input">
+                      {{regionTextArray[0][regionValue[0]].name}}，{{regionTextArray[1][regionValue[1]].name}}，{{regionTextArray[2][regionValue[2]].name}}
+                  </view>
+                </picker>
+
+              </view>
+            </view>
+        </view>
+        <view class="weui-cell weui-cell_select">
+              <view class="weui-cell__hd" style="width: 105px">
+                  <picker bindchange="bindCountryCodeChange" value="{{countryCodeIndex}}" range="{{countryCodes}}">
+                      <view class="weui-select">{{countryCodes[countryCodeIndex]}}</view>
+                  </picker>
+              </view>
+              <view class="weui-cell__bd weui-cell__bd_in-select-before">
+                  <input name="tel" class="weui-input" type='number' bindinput ="telInput"  value='{{tel}}' placeholder="联系电话" />
+              </view>
+          </view>
+      </view>
+      <view class="weui-cells__title">备注信息</view>
+      <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell">
+              <view class="weui-cell__bd">
+                  <textarea name="remarks" class="weui-textarea"  value="{{remarks}}" bindinput ="remarksInput" placeholder="请输入备注信息" style="height: 3.3em" />
+                  <view class="weui-textarea-counter">100</view>
+              </view>
+          </view>
+      </view>
+
+      <view class="weui-btn-area">
+          <button class="weui-btn" type="primary" formType="submit">下一步</button>
+      </view>
+</form>

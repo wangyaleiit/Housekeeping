@@ -1,0 +1,63 @@
+
+
+
+
+ <!-- <view style='margin-top:15px;'>
+    <form bindsubmit='funEmployer'>
+        <button class="weui-btn" formType="submit" type="warn">雇主-发布预约</button>
+    </form>
+  </view>
+  <view style='margin-top:5px;'>
+    <form bindsubmit='funEmployee'>
+      <button class="weui-btn" formType="submit" type="primary">钟点工-发布预约</button>
+    </form>
+  </view> -->
+ 
+   <!-- <view style="word-break: break-all;-moz-box-shadow:-1px 5px 20px #333333; -webkit-box-shadow:-1px 5px 20px #333333; box-shadow:-1px 5px 20px #333333;margin:10px;background-color:#1296db;height:100px;">
+      <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="placeholder" style='padding-left:5px;line-height:60px;color:#fff'>家政预约
+            <view style='padding-left:8px;line-height:10px;color:#fff'>Housekeeping</view>
+          </view>
+          </view>
+          <view class="weui-flex__item"><view class='housekeeping'></view></view>
+      </view>
+  </view>  -->
+
+<view class="page">
+<image src="/images/21ceb1f67d6674b91728bb3b2e78fe11.png" style="width:100%;" />
+    <view style="word-break: break-all;-moz-box-shadow:-1px 5px 20px #333333; -webkit-box-shadow:-1px 5px 20px #333333; box-shadow:-1px 5px 20px #333333;margin:10px;background-color:#FF3030;height:100px;" bindtap='funEmployer'>
+      <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="placeholder" style='padding-left:5px;line-height:60px;color:#fff'>家政预约
+            <view style='padding-left:8px;line-height:10px;color:#fff'>Housekeeping</view>
+          </view>
+          </view>
+          <view class="weui-flex__item"><view class='housekeeping'></view></view>
+      </view>
+  </view>
+
+      <view style="word-break: break-all;-moz-box-shadow:-1px 5px 20px #333333; -webkit-box-shadow:-1px 5px 20px #333333; box-shadow:-1px 5px 20px #333333;margin:10px;background-color:#d4237a;height:100px;" bindtap='funEmployee'>
+      <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="placeholder" style='padding-left:5px;line-height:60px;color:#fff'>雇主预约
+            <view style='padding-left:8px;line-height:10px;color:#fff'>EmployerBespeak</view>
+          </view>
+          </view>
+          <view class="weui-flex__item"><view class='housekeeping2'></view></view>
+      </view>
+  </view>
+
+        <view style="word-break: break-all;-moz-box-shadow:-1px 5px 20px #333333; -webkit-box-shadow:-1px 5px 20px #333333; box-shadow:-1px 5px 20px #333333;margin:10px;background-color:#488f0d;height:100px;" bindtap='knowledge'>
+      <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="placeholder" style='padding-left:5px;line-height:60px;color:#fff'>保洁知识
+            <view style='padding-left:8px;line-height:10px;color:#fff'>Knowledge</view>
+          </view>
+          </view>
+          <view class="weui-flex__item"><view class='housekeeping3'></view></view>
+      </view>
+  </view>
+
+</view>
+

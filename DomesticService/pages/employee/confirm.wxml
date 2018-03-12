@@ -1,0 +1,27 @@
+   <view class="page__bd">
+        <view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">当天服务时间</view>
+                    <view class="weui-form-preview__value_in-hd">{{startTime}}~{{endTime}}</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">服务区域</view>
+                    <view class="weui-form-preview__value">{{regionText}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">联系电话</view>
+                    <view class="weui-form-preview__value">{{tel}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">备注信息</view>
+                    <view class="weui-form-preview__value">{{remarks}}</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__ft">
+                <button class='weui-form-preview__btn weui-form-preview__btn_primary' hover-class="weui-form-preview__btn_active" bindtap='confirm'>确认提交</button>
+            </view>
+        </view>
+    </view>

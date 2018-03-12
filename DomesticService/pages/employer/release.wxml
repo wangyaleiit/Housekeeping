@@ -1,0 +1,70 @@
+<include src="../tools/wxml/picker_datetime.wxml"/>
+
+<form bindsubmit='btnNextStup'>
+  <view class="weui-cells__title">服务内容</view>
+  <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+              <view class="weui-label">服务日期</view>
+          </view>
+          <view class="weui-cell__bd">
+                <view name="startDate" class="weui-input" bindtap="startTap">{{startDate}}</view>
+          </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+              <view class="weui-label">服务方式</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{workTypeArray}}" range-key="typeName">
+              <view class="weui-input">{{workType}}</view>
+            </picker>
+          </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+              <view class="weui-label">订单金额</view>
+          </view>
+          <view class="weui-cell__bd">
+          <view class="weui-input">{{typeMoney}}元</view>
+          </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+              <view class="weui-label">服务地点</view>
+          </view>
+          <view class="weui-cell__bd">
+            <view class="weui-cell__bd">
+                <view class="weui-input" bindtap="selectDistrict">{{chooseAres}}</view>
+            </view>
+          </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd">
+              <input name="address" class="weui-input" value='{{addres}}' bindinput ="addressInput" placeholder="请输入详细地址"/>
+          </view>
+      </view>
+      <view class="weui-cell weui-cell_select">
+            <view class="weui-cell__hd" style="width: 105px">
+                <picker bindchange="bindCountryCodeChange" value="{{countryCodeIndex}}" range="{{countryCodes}}">
+                    <view class="weui-select">{{countryCodes[countryCodeIndex]}}</view>
+                </picker>
+            </view>
+            <view class="weui-cell__bd weui-cell__bd_in-select-before">
+                <input name="tel" class="weui-input" type='number' bindinput ="telInput"  value='{{tel}}' placeholder="请输入号码" />
+            </view>
+        </view>
+  </view>
+  <view class="weui-cells__title">备注信息</view>
+      <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell">
+              <view class="weui-cell__bd">
+                  <textarea name="remarks" class="weui-textarea" placeholder="请输入备注信息" style="height: 3.3em" />
+                  <view class="weui-textarea-counter">0/200</view>
+              </view>
+          </view>
+      </view>
+      <view class="weui-btn-area">
+          <button class="weui-btn" type="primary" formType="submit">下一步</button>
+      </view>
+</form>
